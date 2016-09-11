@@ -32,8 +32,8 @@ class MainPage(Handler):
         if title and art:
             self.write("thanks!")
         else:
-            self.render_front(title, art, error)
             error = "we need both a title and some artwork!"
+            self.render_front(title, art, error)
 
 
 app = webapp2.WSGIApplication([('/', MainPage)], debug = True)
